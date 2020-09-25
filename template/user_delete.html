@@ -4,5 +4,6 @@
     {%csrf_token%}
     <p>are you sure you want to delete {{user.title}}??</p>
     <input type='submit' value='ok'>
+    <button><a href="{% url 'users_details' users.pk %}">Cancel</a></button>
 </form>
 {% endblock main %}

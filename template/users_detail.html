@@ -1,7 +1,8 @@
  {% extends 'base.html' %} {% block main%}
+<a href="{% url 'users' %}">Main</a>
 <h2>details page</h2>
 <h3>{{ users.title }}</h3>
 <h4>{{ users.author }}</h4>
 <p>{{ users.body }}</p>
-
-{% endblock main%}
+<a href="{% url 'users_edit' users.pk %}">Edit</a>
+<a href="{% url 'user_delete' users.pk %}">Delete</a> {% endblock main%}
